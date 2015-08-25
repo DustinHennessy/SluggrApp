@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dRj-yg-nan">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--SLUGGR-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SluggrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="N4G-mD-Z6I">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="420"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="348" id="W5U-Qz-kUo"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="W5U-Qz-kUo"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="QKx-aa-Yoa"/>
+                                    <outletCollection property="gestureRecognizers" destination="Eeq-o5-msB" appends="YES" id="LvE-C6-MhG"/>
+                                </connections>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="114" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2EN-GE-UCg">
+                                <rect key="frame" x="0.0" y="420" width="600" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="aau-XQ-ffR"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="emH-rE-q0c" customClass="UserTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emH-rE-q0c" id="mu9-5s-xjl">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLUGGR Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipc-3H-p1B">
+                                                    <rect key="frame" x="-10" y="2" width="620" height="30"/>
+                                                    <color key="backgroundColor" red="0.82352941176470584" green="0.82352941176470584" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="vmz-Pg-3rc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="26"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure point" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkV-WW-3hx">
+                                                    <rect key="frame" x="0.0" y="33" width="296" height="34"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="AMN-bF-XN6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.85133977520000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dw-ac-neJ">
+                                                    <rect key="frame" x="304" y="33" width="296" height="34"/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="AVj-Gf-TAU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.85133977520000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABb-8R-WDT">
+                                                    <rect key="frame" x="0.0" y="79" width="600" height="33"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="s9t-cd-xKp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="20"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="Invite to Rideshare">
+                                                        <color key="titleColor" red="0.16849327780000001" green="0.19947146120000001" blue="0.60181817859999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="inviteUsers:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="D63-Xj-5Ge"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ons-Qa-Zhy">
+                                                    <rect key="frame" x="0.0" y="70" width="592" height="1"/>
+                                                    <color key="backgroundColor" white="0.85133977520000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="ko8-kG-w5V"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yeq-Wf-Hip">
+                                                    <rect key="frame" x="292" y="31" width="8" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="3qk-W2-Xfh"/>
+                                                        <constraint firstAttribute="width" constant="8" id="tCd-7D-peg"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ons-Qa-Zhy" firstAttribute="trailing" secondItem="mu9-5s-xjl" secondAttribute="trailingMargin" id="0oC-Nf-opA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ipc-3H-p1B" secondAttribute="trailing" constant="-8" id="3dp-ie-wDJ"/>
+                                                <constraint firstItem="Yeq-Wf-Hip" firstAttribute="leading" secondItem="GkV-WW-3hx" secondAttribute="trailing" constant="-4" id="88G-WQ-JDf"/>
+                                                <constraint firstItem="Yeq-Wf-Hip" firstAttribute="top" secondItem="ipc-3H-p1B" secondAttribute="bottom" constant="-1" id="8pj-ej-0AV"/>
+                                                <constraint firstItem="4dw-ac-neJ" firstAttribute="top" secondItem="ipc-3H-p1B" secondAttribute="bottom" constant="1" id="C4I-Rq-Aj1"/>
+                                                <constraint firstItem="ons-Qa-Zhy" firstAttribute="top" secondItem="GkV-WW-3hx" secondAttribute="bottom" constant="3" id="K3j-pC-atS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ABb-8R-WDT" secondAttribute="trailing" constant="-8" id="LJ2-29-SRP"/>
+                                                <constraint firstItem="ipc-3H-p1B" firstAttribute="top" secondItem="mu9-5s-xjl" secondAttribute="topMargin" constant="-6" id="O5C-kW-hKO"/>
+                                                <constraint firstItem="ipc-3H-p1B" firstAttribute="leading" secondItem="mu9-5s-xjl" secondAttribute="leadingMargin" constant="-18" id="Oxy-3w-wZm"/>
+                                                <constraint firstItem="GkV-WW-3hx" firstAttribute="top" secondItem="ipc-3H-p1B" secondAttribute="bottom" constant="1" id="VNT-LB-80r"/>
+                                                <constraint firstItem="GkV-WW-3hx" firstAttribute="leading" secondItem="mu9-5s-xjl" secondAttribute="leadingMargin" constant="-8" id="Zh0-Eg-fTb"/>
+                                                <constraint firstItem="ABb-8R-WDT" firstAttribute="top" secondItem="GkV-WW-3hx" secondAttribute="bottom" constant="12" id="bu5-i8-Ee9"/>
+                                                <constraint firstItem="ABb-8R-WDT" firstAttribute="leading" secondItem="mu9-5s-xjl" secondAttribute="leadingMargin" constant="-8" id="d3f-NG-WjX"/>
+                                                <constraint firstItem="ons-Qa-Zhy" firstAttribute="leading" secondItem="mu9-5s-xjl" secondAttribute="leadingMargin" constant="-8" id="dNe-BK-i8L"/>
+                                                <constraint firstItem="ipc-3H-p1B" firstAttribute="leading" secondItem="Yeq-Wf-Hip" secondAttribute="trailing" constant="-300" id="oRD-58-qck"/>
+                                                <constraint firstItem="ons-Qa-Zhy" firstAttribute="top" secondItem="Yeq-Wf-Hip" secondAttribute="bottom" constant="-1" id="ouy-so-xww"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ipc-3H-p1B" secondAttribute="trailing" constant="-18" id="pFZ-Jd-ZAa"/>
+                                                <constraint firstItem="4dw-ac-neJ" firstAttribute="leading" secondItem="GkV-WW-3hx" secondAttribute="trailing" constant="8" id="sD5-6B-84V"/>
+                                                <constraint firstItem="4dw-ac-neJ" firstAttribute="leading" secondItem="Yeq-Wf-Hip" secondAttribute="trailing" constant="4" id="sLf-KG-w6t"/>
+                                                <constraint firstItem="GkV-WW-3hx" firstAttribute="width" secondItem="4dw-ac-neJ" secondAttribute="width" id="yuv-j1-4oP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4dw-ac-neJ" secondAttribute="trailing" constant="-8" id="zXV-D9-Q5h"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="3dp-ie-wDJ"/>
+                                                    <exclude reference="oRD-58-qck"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="departureLabel" destination="GkV-WW-3hx" id="FNh-3d-1ff"/>
+                                            <outlet property="destinationLabel" destination="4dw-ac-neJ" id="yNP-Ds-iJa"/>
+                                            <outlet property="nameLabel" destination="ipc-3H-p1B" id="qQU-Oa-4hu"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GroupCell" rowHeight="78" id="CyW-OQ-2NO" customClass="GroupTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CyW-OQ-2NO" id="bYc-8U-Fl7">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure point" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2xJ-JX-qNk">
+                                                    <rect key="frame" x="58" y="40" width="238" height="34"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="294" id="1mI-pS-9dn"/>
+                                                        <constraint firstAttribute="height" constant="34" id="eiG-SC-9h2"/>
+                                                        <constraint firstAttribute="width" constant="296" id="fJk-CX-ZHf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.85133977520000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="1mI-pS-9dn"/>
+                                                            <exclude reference="fJk-CX-ZHf"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iCU-mG-81E">
+                                                    <rect key="frame" x="304" y="40" width="296" height="34"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="dVa-QY-M23"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="v5O-qr-5m1"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="18"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.85133977520000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="v5O-qr-5m1"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hj4-2R-NpA">
+                                                    <rect key="frame" x="0.0" y="4" width="600" height="33"/>
+                                                    <color key="backgroundColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="Ufn-BI-GhO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="23"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="iBi-Bn-OL1">
+                                                    <rect key="frame" x="296" y="37" width="8" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="8" id="0Wb-8V-nSB"/>
+                                                        <constraint firstAttribute="height" constant="40" id="O05-r4-FZN"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="WPX-9G-DRy"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="rZZ-Qy-WGb"/>
+                                                    </constraints>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="WPX-9G-DRy"/>
+                                                            <exclude reference="rZZ-Qy-WGb"/>
+                                                        </mask>
+                                                    </variation>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUt-zU-wy7" customClass="BorderedRoundedView" customModule="SluggrApp" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="41" width="32" height="33"/>
+                                                    <color key="backgroundColor" red="0.16849327780000001" green="0.19947146120000001" blue="0.60181817859999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="7TE-mB-Wja"/>
+                                                        <constraint firstAttribute="width" constant="32" id="V2C-Dg-8bM"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="37" id="mlh-o3-c4k"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Medium" family="Kohinoor Devanagari" pointSize="24"/>
+                                                    <color key="textColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="17"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="mlh-o3-c4k"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q41-Oj-M82">
+                                                    <rect key="frame" x="0.0" y="75" width="592" height="1"/>
+                                                    <color key="backgroundColor" white="0.85133977520000004" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="1OB-dB-I4q"/>
+                                                        <constraint firstAttribute="height" constant="1" id="UjY-M7-5fc"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WUt-zU-wy7" firstAttribute="leading" secondItem="bYc-8U-Fl7" secondAttribute="leadingMargin" id="0uj-qO-xjm"/>
+                                                <constraint firstItem="q41-Oj-M82" firstAttribute="top" secondItem="iBi-Bn-OL1" secondAttribute="bottom" constant="-2" id="0yh-ti-UT2"/>
+                                                <constraint firstItem="WUt-zU-wy7" firstAttribute="top" secondItem="hj4-2R-NpA" secondAttribute="bottom" constant="4" id="GpX-xs-hzC"/>
+                                                <constraint firstItem="iBi-Bn-OL1" firstAttribute="leading" secondItem="2xJ-JX-qNk" secondAttribute="trailing" id="HgR-Oz-RsA"/>
+                                                <constraint firstItem="q41-Oj-M82" firstAttribute="trailing" secondItem="bYc-8U-Fl7" secondAttribute="trailingMargin" id="Hvs-dU-Ies"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="iBi-Bn-OL1" secondAttribute="bottom" constant="-8" id="Se2-iD-qXi"/>
+                                                <constraint firstItem="2xJ-JX-qNk" firstAttribute="leading" secondItem="WUt-zU-wy7" secondAttribute="trailing" constant="18" id="ToI-SV-8oI"/>
+                                                <constraint firstItem="2xJ-JX-qNk" firstAttribute="leading" secondItem="bYc-8U-Fl7" secondAttribute="leadingMargin" constant="-8" id="UiQ-oS-HZ9"/>
+                                                <constraint firstItem="2xJ-JX-qNk" firstAttribute="top" secondItem="hj4-2R-NpA" secondAttribute="bottom" constant="3" id="Vwd-3C-721"/>
+                                                <constraint firstItem="iCU-mG-81E" firstAttribute="leading" secondItem="iBi-Bn-OL1" secondAttribute="trailing" id="WLu-fC-MFo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iCU-mG-81E" secondAttribute="trailing" constant="-8" id="ZKb-fZ-WEe"/>
+                                                <constraint firstItem="q41-Oj-M82" firstAttribute="leading" secondItem="bYc-8U-Fl7" secondAttribute="leadingMargin" constant="-8" id="bib-Tb-jER"/>
+                                                <constraint firstItem="iBi-Bn-OL1" firstAttribute="centerX" secondItem="hj4-2R-NpA" secondAttribute="centerX" id="dMm-o8-1w1"/>
+                                                <constraint firstItem="iBi-Bn-OL1" firstAttribute="top" secondItem="WUt-zU-wy7" secondAttribute="top" constant="-4" id="dbf-is-EDh"/>
+                                                <constraint firstItem="hj4-2R-NpA" firstAttribute="leading" secondItem="bYc-8U-Fl7" secondAttribute="leadingMargin" constant="-8" id="fqy-19-UMQ"/>
+                                                <constraint firstItem="q41-Oj-M82" firstAttribute="top" secondItem="iCU-mG-81E" secondAttribute="bottom" constant="1" id="u0u-DV-3fe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hj4-2R-NpA" secondAttribute="trailing" constant="-8" id="u2c-Fc-bey"/>
+                                                <constraint firstItem="q41-Oj-M82" firstAttribute="top" secondItem="2xJ-JX-qNk" secondAttribute="bottom" constant="1" id="uqK-hc-Stb"/>
+                                                <constraint firstItem="iCU-mG-81E" firstAttribute="top" secondItem="hj4-2R-NpA" secondAttribute="bottom" constant="3" id="vRh-gf-Y42"/>
+                                                <constraint firstItem="hj4-2R-NpA" firstAttribute="top" secondItem="bYc-8U-Fl7" secondAttribute="topMargin" constant="-4" id="vgB-Ax-3Kv"/>
+                                                <constraint firstItem="iCU-mG-81E" firstAttribute="width" secondItem="2xJ-JX-qNk" secondAttribute="width" constant="58" id="vvy-te-84d"/>
+                                                <constraint firstItem="iCU-mG-81E" firstAttribute="leading" secondItem="2xJ-JX-qNk" secondAttribute="trailing" constant="8" id="zYG-Yi-spH"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="UiQ-oS-HZ9"/>
+                                                    <exclude reference="Se2-iD-qXi"/>
+                                                    <exclude reference="zYG-Yi-spH"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="departureLabel" destination="2xJ-JX-qNk" id="Z7t-vS-pBz"/>
+                                            <outlet property="destinationLabel" destination="iCU-mG-81E" id="nVU-5o-1FD"/>
+                                            <outlet property="driverLabel" destination="WUt-zU-wy7" id="dAY-zb-0FS"/>
+                                            <outlet property="groupMemberNameLabel" destination="hj4-2R-NpA" id="p81-db-pOw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="ZN6-Nf-W6v"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ud0-Mx-Uy7"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fUr-T1-vVT">
+                                <rect key="frame" x="0.0" y="393" width="600" height="29"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="8NS-0k-ntJ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Users"/>
+                                    <segment title="My Group"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="vXZ-lx-hvc" eventType="valueChanged" id="xI6-XJ-mbH"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="2EN-GE-UCg" secondAttribute="bottom" id="3WY-CF-5dw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2EN-GE-UCg" secondAttribute="trailing" constant="-16" id="AUQ-Od-ANW"/>
+                            <constraint firstItem="2EN-GE-UCg" firstAttribute="top" secondItem="fUr-T1-vVT" secondAttribute="bottom" id="Ahr-aV-77H"/>
+                            <constraint firstItem="2EN-GE-UCg" firstAttribute="top" secondItem="fUr-T1-vVT" secondAttribute="bottom" constant="-1" id="Hgb-VN-ypk"/>
+                            <constraint firstItem="2EN-GE-UCg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="KQX-CM-GXk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N4G-mD-Z6I" secondAttribute="trailing" constant="-16" id="LVS-VR-oeO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fUr-T1-vVT" secondAttribute="trailing" constant="-16" id="Rjm-GW-LL6"/>
+                            <constraint firstItem="2EN-GE-UCg" firstAttribute="top" secondItem="N4G-mD-Z6I" secondAttribute="bottom" id="Zg6-qx-xMG"/>
+                            <constraint firstItem="N4G-mD-Z6I" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="dPl-Y9-bpf"/>
+                            <constraint firstItem="fUr-T1-vVT" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="eUi-4I-Lju"/>
+                            <constraint firstItem="N4G-mD-Z6I" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="gi5-Hj-aPC"/>
+                            <constraint firstItem="fUr-T1-vVT" firstAttribute="bottom" secondItem="N4G-mD-Z6I" secondAttribute="bottom" id="nLK-Zf-N11"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nLK-Zf-N11"/>
+                                <exclude reference="Ahr-aV-77H"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="SLUGGR" id="hib-SG-WZI">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" style="plain" id="5VV-ah-mlf">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Vhu-cN-CVk" kind="show" id="Prt-IR-S8C"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Login" id="qCa-ot-f4A">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="dCR-Oy-m23" kind="show" identifier="toLogin" id="sXt-vg-gHx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="editProfileButton" destination="5VV-ah-mlf" id="Hqo-0S-3Wm"/>
+                        <outlet property="mapView" destination="N4G-mD-Z6I" id="dD9-dr-gpy"/>
+                        <outlet property="segmentedControl" destination="fUr-T1-vVT" id="lFn-3u-mpG"/>
+                        <outlet property="userTableView" destination="2EN-GE-UCg" id="kxd-RB-UGT"/>
+                        <segue destination="0bv-7V-gij" kind="show" identifier="toMemberDetail" id="plt-lR-BF7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Eeq-o5-msB">
+                    <connections>
+                        <action selector="calculateDistance:" destination="vXZ-lx-hvc" id="XKl-ph-7BH"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="442" y="365"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="3V9-gv-TN0">
+            <objects>
+                <viewController id="dCR-Oy-m23" customClass="LoginViewController" customModule="SluggrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pfT-q6-ZZr"/>
+                        <viewControllerLayoutGuide type="bottom" id="4CQ-Nd-n2D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e41-ol-vO0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbO-Ei-CAO">
+                                <rect key="frame" x="16" y="343" width="568" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="EdR-B1-LH8"/>
+                                </constraints>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="LoginUser:" destination="dCR-Oy-m23" eventType="touchUpInside" id="DDU-Ts-zLP"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="51" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-Kw-mVz">
+                                <rect key="frame" x="0.0" y="64" width="600" height="260"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="m0z-ag-t8a"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="rlcell" rowHeight="51" id="9Rt-F0-QIq" customClass="ProfileTextFieldTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Rt-F0-QIq" id="llo-tO-Bne">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhN-nd-Ali">
+                                                    <rect key="frame" x="8" y="8" width="95" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="Dcf-hQ-bU0"/>
+                                                        <constraint firstAttribute="width" constant="95" id="VWG-c1-L2u"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="Dcf-hQ-bU0"/>
+                                                        </mask>
+                                                    </variation>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdK-M0-dCH">
+                                                    <rect key="frame" x="111" y="7" width="481" height="37"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="hja-Xv-XAf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="hja-Xv-XAf"/>
+                                                        </mask>
+                                                    </variation>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gdK-M0-dCH" firstAttribute="trailing" secondItem="llo-tO-Bne" secondAttribute="trailingMargin" id="EF2-DF-ud3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gdK-M0-dCH" secondAttribute="bottom" constant="-2" id="IZt-4n-wSY"/>
+                                                <constraint firstItem="fhN-nd-Ali" firstAttribute="top" secondItem="llo-tO-Bne" secondAttribute="topMargin" id="OI9-8c-n8V"/>
+                                                <constraint firstItem="gdK-M0-dCH" firstAttribute="top" secondItem="llo-tO-Bne" secondAttribute="topMargin" constant="-1" id="Unn-pJ-BvJ"/>
+                                                <constraint firstItem="fhN-nd-Ali" firstAttribute="bottom" secondItem="llo-tO-Bne" secondAttribute="bottomMargin" id="VYI-ZX-Neg"/>
+                                                <constraint firstItem="fhN-nd-Ali" firstAttribute="leading" secondItem="llo-tO-Bne" secondAttribute="leadingMargin" id="sUt-nX-0aq"/>
+                                                <constraint firstItem="gdK-M0-dCH" firstAttribute="leading" secondItem="fhN-nd-Ali" secondAttribute="trailing" constant="8" id="tyg-Tc-p1G"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dynamicProfileTextField" destination="gdK-M0-dCH" id="HWo-sb-9b9"/>
+                                            <outlet property="dynamicTFCLabel" destination="fhN-nd-Ali" id="fF1-hm-7IN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dCR-Oy-m23" id="iZM-Zh-F4w"/>
+                                    <outlet property="delegate" destination="dCR-Oy-m23" id="6RQ-do-mMC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vbO-Ei-CAO" firstAttribute="trailing" secondItem="e41-ol-vO0" secondAttribute="trailingMargin" id="EB1-q6-r3U"/>
+                            <constraint firstItem="vbO-Ei-CAO" firstAttribute="leading" secondItem="e41-ol-vO0" secondAttribute="leadingMargin" id="GWK-mB-XRM"/>
+                            <constraint firstItem="vbO-Ei-CAO" firstAttribute="top" secondItem="Hgs-Kw-mVz" secondAttribute="bottom" constant="19" id="Jjw-dL-tlI"/>
+                            <constraint firstAttribute="centerX" secondItem="vbO-Ei-CAO" secondAttribute="centerX" id="aAi-KB-Tb5"/>
+                            <constraint firstItem="Hgs-Kw-mVz" firstAttribute="leading" secondItem="e41-ol-vO0" secondAttribute="leadingMargin" constant="-16" id="fWx-hM-LLV"/>
+                            <constraint firstItem="vbO-Ei-CAO" firstAttribute="top" secondItem="pfT-q6-ZZr" secondAttribute="bottom" constant="13" id="grX-KK-xC0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hgs-Kw-mVz" secondAttribute="trailing" constant="-16" id="l6y-Bj-yLb"/>
+                            <constraint firstItem="Hgs-Kw-mVz" firstAttribute="top" secondItem="pfT-q6-ZZr" secondAttribute="bottom" id="uQF-KE-zGy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="aAi-KB-Tb5"/>
+                                <exclude reference="grX-KK-xC0"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="pLI-SJ-t1q">
+                        <barButtonItem key="rightBarButtonItem" title="Register" id="PZN-rK-eGL">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="signUpUser:" destination="dCR-Oy-m23" id="lxm-sm-w87"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="loginTableView" destination="Hgs-Kw-mVz" id="gUW-1G-hBh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MAr-6e-QvC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="365"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IHn-43-I2I">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dRj-yg-nan" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tlx-hk-y5H">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="AeK-zU-GfF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSj-uV-pXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-228" y="365"/>
+        </scene>
+        <!--Edit Profile-->
+        <scene sceneID="iSB-2a-kN0">
+            <objects>
+                <viewController id="Vhu-cN-CVk" customClass="EditProfileViewController" customModule="SluggrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="faq-6d-qVe"/>
+                        <viewControllerLayoutGuide type="bottom" id="uSj-uH-7IU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qdK-Ol-0Uu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-a4-eWP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextFieldCell" id="hh7-A4-wXQ" customClass="ProfileTextFieldTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hh7-A4-wXQ" id="Sht-kU-sHi">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUx-ED-q3w">
+                                                    <rect key="frame" x="8" y="8" width="108" height="27"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oFE-dG-hml">
+                                                    <rect key="frame" x="123" y="7" width="469" height="30"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WUx-ED-q3w" firstAttribute="bottom" secondItem="Sht-kU-sHi" secondAttribute="bottomMargin" id="7F6-u0-gv8"/>
+                                                <constraint firstItem="oFE-dG-hml" firstAttribute="leading" secondItem="WUx-ED-q3w" secondAttribute="trailing" constant="7" id="7Hs-Tp-Pxz"/>
+                                                <constraint firstItem="oFE-dG-hml" firstAttribute="trailing" secondItem="Sht-kU-sHi" secondAttribute="trailingMargin" id="Cf3-OI-sGA"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oFE-dG-hml" secondAttribute="bottom" constant="-2" id="Ecc-vE-0ml"/>
+                                                <constraint firstItem="WUx-ED-q3w" firstAttribute="leading" secondItem="Sht-kU-sHi" secondAttribute="leadingMargin" id="d1y-qQ-f3g"/>
+                                                <constraint firstItem="WUx-ED-q3w" firstAttribute="top" secondItem="Sht-kU-sHi" secondAttribute="topMargin" id="dk3-GP-cWZ"/>
+                                                <constraint firstItem="oFE-dG-hml" firstAttribute="top" secondItem="Sht-kU-sHi" secondAttribute="topMargin" constant="-1" id="gHh-2E-d3v"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dynamicProfileTextField" destination="oFE-dG-hml" id="xDr-MS-XqI"/>
+                                            <outlet property="dynamicTFCLabel" destination="WUx-ED-q3w" id="w2D-SA-JxX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextViewCell" rowHeight="113" id="ALt-6d-j0M" customClass="ProfileTextViewTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ALt-6d-j0M" id="Sl6-rd-smk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iw2-Wz-wW1">
+                                                    <rect key="frame" x="8" y="8" width="108" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="108" id="ChA-47-Jcr"/>
+                                                        <constraint firstAttribute="height" constant="27" id="GNB-nT-HrT"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7e-2a-cOh">
+                                                    <rect key="frame" x="124" y="8" width="468" height="94"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="E7e-2a-cOh" firstAttribute="bottom" secondItem="Sl6-rd-smk" secondAttribute="bottomMargin" constant="-3" id="1mH-U0-cXz"/>
+                                                <constraint firstItem="iw2-Wz-wW1" firstAttribute="leading" secondItem="Sl6-rd-smk" secondAttribute="leadingMargin" id="3o3-m8-JH0"/>
+                                                <constraint firstItem="E7e-2a-cOh" firstAttribute="top" secondItem="Sl6-rd-smk" secondAttribute="topMargin" id="A39-ot-ao1"/>
+                                                <constraint firstItem="E7e-2a-cOh" firstAttribute="trailing" secondItem="Sl6-rd-smk" secondAttribute="trailingMargin" id="P9k-0w-DYN"/>
+                                                <constraint firstItem="iw2-Wz-wW1" firstAttribute="top" secondItem="Sl6-rd-smk" secondAttribute="topMargin" id="mrk-WY-Flg"/>
+                                                <constraint firstItem="E7e-2a-cOh" firstAttribute="leading" secondItem="iw2-Wz-wW1" secondAttribute="trailing" constant="8" id="y5J-PV-PmF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dynamicTVCLabel" destination="iw2-Wz-wW1" id="el4-RI-aif"/>
+                                            <outlet property="dynamicTextView" destination="E7e-2a-cOh" id="vMh-Ll-Az9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SwitchCell" rowHeight="46" id="cpc-Mp-ybM" customClass="ProfileSwitchTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cpc-Mp-ybM" id="BBh-e1-oT4">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Driver?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FA6-h5-pS7">
+                                                    <rect key="frame" x="8" y="8" width="108" height="27"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dT0-vy-Hkl">
+                                                    <rect key="frame" x="124" y="6" width="51" height="31"/>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FA6-h5-pS7" firstAttribute="leading" secondItem="BBh-e1-oT4" secondAttribute="leadingMargin" id="47q-7r-qxW"/>
+                                                <constraint firstItem="FA6-h5-pS7" firstAttribute="top" secondItem="BBh-e1-oT4" secondAttribute="topMargin" id="6j8-Th-zAp"/>
+                                                <constraint firstItem="dT0-vy-Hkl" firstAttribute="bottom" secondItem="BBh-e1-oT4" secondAttribute="bottomMargin" id="O6E-oE-LTP"/>
+                                                <constraint firstItem="dT0-vy-Hkl" firstAttribute="leading" secondItem="FA6-h5-pS7" secondAttribute="trailing" constant="8" id="ZWm-1G-OK8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FA6-h5-pS7" secondAttribute="bottom" constant="2" id="evy-fp-9HD"/>
+                                                <constraint firstItem="dT0-vy-Hkl" firstAttribute="top" secondItem="BBh-e1-oT4" secondAttribute="topMargin" constant="-2" id="vr3-rL-cWa"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellSwitch" destination="dT0-vy-Hkl" id="9hO-nB-Vgu"/>
+                                            <outlet property="dynamicSCLabel" destination="FA6-h5-pS7" id="oGk-Bv-TWa"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DateCell" rowHeight="200" id="nYt-q2-LUp" customClass="ProfileDateTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nYt-q2-LUp" id="kN3-pW-wLs">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <datePicker contentMode="scaleAspectFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FKg-NQ-brJ">
+                                                    <rect key="frame" x="8" y="8" width="584" height="184"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="184" id="Yxf-Wf-bXJ"/>
+                                                    </constraints>
+                                                    <date key="date" timeIntervalSinceReferenceDate="460564507.79539698">
+                                                        <!--2015-08-06 14:35:07 +0000-->
+                                                    </date>
+                                                </datePicker>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FKg-NQ-brJ" secondAttribute="bottom" id="3Kn-s1-XBJ"/>
+                                                <constraint firstItem="FKg-NQ-brJ" firstAttribute="leading" secondItem="kN3-pW-wLs" secondAttribute="leadingMargin" id="7dG-wZ-hyv"/>
+                                                <constraint firstItem="FKg-NQ-brJ" firstAttribute="trailing" secondItem="kN3-pW-wLs" secondAttribute="trailingMargin" id="H3u-Qk-WME"/>
+                                                <constraint firstItem="FKg-NQ-brJ" firstAttribute="top" secondItem="kN3-pW-wLs" secondAttribute="topMargin" id="o36-i1-rFq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cellDatePicker" destination="FKg-NQ-brJ" id="jRg-YA-ZqN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapCell" rowHeight="135" id="ayG-Ci-yPE" customClass="ProfileMapTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ayG-Ci-yPE" id="IQg-Ex-lGx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your Map" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-PY-wgk">
+                                                    <rect key="frame" x="8" y="8" width="74" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="ZH3-lS-mWQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wem-MX-3nF">
+                                                    <rect key="frame" x="90" y="8" width="502" height="116"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qqg-PY-wgk" firstAttribute="top" secondItem="IQg-Ex-lGx" secondAttribute="topMargin" id="HDD-Pu-KQU"/>
+                                                <constraint firstItem="Wem-MX-3nF" firstAttribute="bottom" secondItem="IQg-Ex-lGx" secondAttribute="bottomMargin" id="L0S-Ca-HWc"/>
+                                                <constraint firstItem="Wem-MX-3nF" firstAttribute="top" secondItem="IQg-Ex-lGx" secondAttribute="topMargin" id="UuT-Z2-W1T"/>
+                                                <constraint firstItem="Wem-MX-3nF" firstAttribute="leading" secondItem="Qqg-PY-wgk" secondAttribute="trailing" constant="8" id="WPT-wQ-BSX"/>
+                                                <constraint firstItem="Wem-MX-3nF" firstAttribute="trailing" secondItem="IQg-Ex-lGx" secondAttribute="trailingMargin" id="rNH-u7-hlC"/>
+                                                <constraint firstItem="Qqg-PY-wgk" firstAttribute="leading" secondItem="IQg-Ex-lGx" secondAttribute="leadingMargin" id="uDN-LY-Wse"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dynamicMCLabel" destination="Qqg-PY-wgk" id="TSF-7f-MBZ"/>
+                                            <outlet property="profileMapView" destination="Wem-MX-3nF" id="zCx-vD-VJP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LabelCell" rowHeight="45" id="7iP-kW-dDh" customClass="ProfileLabelTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7iP-kW-dDh" id="EqD-0N-FWc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dqi-Vh-GiZ">
+                                                    <rect key="frame" x="124" y="8" width="468" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="tYy-AL-ztt"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Depart Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxE-ng-1gW">
+                                                    <rect key="frame" x="8" y="9" width="108" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="rPq-xG-jkI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dqi-Vh-GiZ" firstAttribute="leading" secondItem="RxE-ng-1gW" secondAttribute="trailing" constant="8" id="J6e-mj-dJk"/>
+                                                <constraint firstItem="RxE-ng-1gW" firstAttribute="leading" secondItem="EqD-0N-FWc" secondAttribute="leadingMargin" id="k0q-ra-DyU"/>
+                                                <constraint firstItem="RxE-ng-1gW" firstAttribute="top" secondItem="EqD-0N-FWc" secondAttribute="topMargin" id="uXC-Ey-szI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dynamicLCDetailLabel" destination="Dqi-Vh-GiZ" id="HWG-kz-ctN"/>
+                                            <outlet property="dynamicLCLabel" destination="RxE-ng-1gW" id="Dc1-P7-aEl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vhu-cN-CVk" id="BBd-BA-EnP"/>
+                                    <outlet property="delegate" destination="Vhu-cN-CVk" id="JbM-Il-ha4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XMj-a4-eWP" firstAttribute="top" secondItem="faq-6d-qVe" secondAttribute="bottom" constant="-64" id="69w-1M-LbX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XMj-a4-eWP" secondAttribute="trailing" constant="-16" id="Ixw-6J-OCa"/>
+                            <constraint firstItem="uSj-uH-7IU" firstAttribute="top" secondItem="XMj-a4-eWP" secondAttribute="bottom" id="rG4-re-PC5"/>
+                            <constraint firstItem="XMj-a4-eWP" firstAttribute="leading" secondItem="qdK-Ol-0Uu" secondAttribute="leadingMargin" constant="-16" id="vex-ZT-uEV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="aIi-5E-Ffi">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="RZi-dL-isF">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="saveDataToAPI:" destination="Vhu-cN-CVk" id="BD1-JI-mqV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="profileTableView" destination="XMj-a4-eWP" id="tPJ-mf-3j5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pPn-E4-J1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="1103"/>
+        </scene>
+        <!--Member Detail View Controller-->
+        <scene sceneID="gx1-jk-PFW">
+            <objects>
+                <viewController id="0bv-7V-gij" customClass="MemberDetailViewController" customModule="SluggrApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bcv-zL-B5J"/>
+                        <viewControllerLayoutGuide type="bottom" id="bew-Vb-DG4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIj-ug-p5l">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="96" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vSZ-WD-iJg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nameCell" rowHeight="52" id="Suk-rY-EkB" customClass="MemberNameTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Suk-rY-EkB" id="E05-nN-6EG">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGM-QR-fIJ">
+                                                    <rect key="frame" x="8" y="8" width="584" height="32"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="tGM-QR-fIJ" secondAttribute="bottom" constant="3" id="DmH-hm-Ibp"/>
+                                                <constraint firstItem="tGM-QR-fIJ" firstAttribute="leading" secondItem="E05-nN-6EG" secondAttribute="leadingMargin" id="WU0-Hp-Cei"/>
+                                                <constraint firstItem="tGM-QR-fIJ" firstAttribute="trailing" secondItem="E05-nN-6EG" secondAttribute="trailingMargin" id="giN-m5-ymv"/>
+                                                <constraint firstItem="tGM-QR-fIJ" firstAttribute="top" secondItem="E05-nN-6EG" secondAttribute="topMargin" id="lwG-sW-GaM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memberFullNameLabel" destination="tGM-QR-fIJ" id="G29-rV-qvX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="emailCell" rowHeight="96" id="doZ-xI-oKo" customClass="MemberEmailTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="doZ-xI-oKo" id="1cN-iL-5Ys">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgP-rx-YTw">
+                                                    <rect key="frame" x="8" y="48" width="584" height="39"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="39" id="Mp7-8z-8LL"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Email  User">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="emailButtonPressed:" destination="0bv-7V-gij" eventType="touchUpInside" id="nWN-cW-wp6"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bm-dz-N6c">
+                                                    <rect key="frame" x="8" y="8" width="125" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="FGX-ri-CHG"/>
+                                                        <constraint firstAttribute="height" constant="32" id="lfj-R9-nAa"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-xw-ghn">
+                                                    <rect key="frame" x="141" y="8" width="451" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="4OW-ib-nZ9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="zgP-rx-YTw" firstAttribute="bottom" secondItem="1cN-iL-5Ys" secondAttribute="bottomMargin" id="41s-Uu-u0I"/>
+                                                <constraint firstItem="zgP-rx-YTw" firstAttribute="trailing" secondItem="1cN-iL-5Ys" secondAttribute="trailingMargin" id="8hw-DV-BBT"/>
+                                                <constraint firstItem="2bm-dz-N6c" firstAttribute="top" secondItem="1cN-iL-5Ys" secondAttribute="topMargin" id="CGS-qP-o6P"/>
+                                                <constraint firstItem="zgP-rx-YTw" firstAttribute="leading" secondItem="1cN-iL-5Ys" secondAttribute="leadingMargin" id="EAx-13-FTv"/>
+                                                <constraint firstItem="zgP-rx-YTw" firstAttribute="top" secondItem="qNh-xw-ghn" secondAttribute="bottom" constant="8" id="MaI-vo-SNz"/>
+                                                <constraint firstItem="zgP-rx-YTw" firstAttribute="top" secondItem="2bm-dz-N6c" secondAttribute="bottom" constant="8" id="OgK-Zv-LvN"/>
+                                                <constraint firstItem="qNh-xw-ghn" firstAttribute="trailing" secondItem="1cN-iL-5Ys" secondAttribute="trailingMargin" id="VGa-Ph-M8J"/>
+                                                <constraint firstItem="2bm-dz-N6c" firstAttribute="leading" secondItem="1cN-iL-5Ys" secondAttribute="leadingMargin" id="dTL-Af-aFC"/>
+                                                <constraint firstItem="qNh-xw-ghn" firstAttribute="top" secondItem="1cN-iL-5Ys" secondAttribute="topMargin" id="uH0-id-cH2"/>
+                                                <constraint firstItem="qNh-xw-ghn" firstAttribute="leading" secondItem="2bm-dz-N6c" secondAttribute="trailing" constant="8" id="uqc-bD-9zy"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="41s-Uu-u0I"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailAddressLabel" destination="qNh-xw-ghn" id="HrA-it-ppe"/>
+                                            <outlet property="emailButton" destination="zgP-rx-YTw" id="4B3-VN-swb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="travelCell" rowHeight="96" id="J3P-xb-Pfh" customClass="MemberTravelTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J3P-xb-Pfh" id="9pO-AT-8sJ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dyn Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es2-EO-Fv6">
+                                                    <rect key="frame" x="8" y="8" width="125" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="Af9-6Y-HrI"/>
+                                                        <constraint firstAttribute="height" constant="32" id="BFf-S8-0Tb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dyn Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="INy-1Y-Twg">
+                                                    <rect key="frame" x="8" y="48" width="125" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="Oqj-5T-Ii6"/>
+                                                        <constraint firstAttribute="width" constant="125" id="wWR-Y2-oeI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9w-w1-21M">
+                                                    <rect key="frame" x="141" y="8" width="451" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="DOE-Cz-cBX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8d-3D-Ynw">
+                                                    <rect key="frame" x="141" y="48" width="451" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="dze-DM-mgO"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="L8d-3D-Ynw" firstAttribute="trailing" secondItem="9pO-AT-8sJ" secondAttribute="trailingMargin" id="3J7-Xc-Sdw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="L8d-3D-Ynw" secondAttribute="bottom" constant="7" id="ERf-9J-c7U"/>
+                                                <constraint firstItem="INy-1Y-Twg" firstAttribute="leading" secondItem="9pO-AT-8sJ" secondAttribute="leadingMargin" id="ILg-6F-BlG"/>
+                                                <constraint firstItem="es2-EO-Fv6" firstAttribute="top" secondItem="9pO-AT-8sJ" secondAttribute="topMargin" id="IRB-CO-koN"/>
+                                                <constraint firstItem="L8d-3D-Ynw" firstAttribute="top" secondItem="D9w-w1-21M" secondAttribute="bottom" constant="8" id="JSk-9d-qM2"/>
+                                                <constraint firstItem="INy-1Y-Twg" firstAttribute="top" secondItem="es2-EO-Fv6" secondAttribute="bottom" constant="8" id="NEV-pi-fFu"/>
+                                                <constraint firstItem="D9w-w1-21M" firstAttribute="trailing" secondItem="9pO-AT-8sJ" secondAttribute="trailingMargin" id="QCQ-Mx-0WJ"/>
+                                                <constraint firstItem="es2-EO-Fv6" firstAttribute="leading" secondItem="9pO-AT-8sJ" secondAttribute="leadingMargin" id="Wx7-CV-h28"/>
+                                                <constraint firstItem="L8d-3D-Ynw" firstAttribute="leading" secondItem="INy-1Y-Twg" secondAttribute="trailing" constant="8" id="X93-35-6uA"/>
+                                                <constraint firstItem="D9w-w1-21M" firstAttribute="leading" secondItem="es2-EO-Fv6" secondAttribute="trailing" constant="8" id="XPK-U0-nEM"/>
+                                                <constraint firstItem="D9w-w1-21M" firstAttribute="top" secondItem="9pO-AT-8sJ" secondAttribute="topMargin" id="bVk-pf-jh3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="INy-1Y-Twg" secondAttribute="bottom" constant="7" id="dYz-vR-LfM"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="dYz-vR-LfM"/>
+                                                    <exclude reference="ERf-9J-c7U"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dynamicDepartLabel" destination="es2-EO-Fv6" id="x6G-lg-5YO"/>
+                                            <outlet property="dynamicDestLabel" destination="INy-1Y-Twg" id="Go0-Wc-33K"/>
+                                            <outlet property="dynamicDetailDepartLabel" destination="D9w-w1-21M" id="yWA-Id-9TC"/>
+                                            <outlet property="dynamicDetailDestLabel" destination="L8d-3D-Ynw" id="KnJ-HO-AYj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="textViewCell" rowHeight="96" id="j2o-S2-Ico" customClass="ProfileTextViewTableViewCell" customModule="SluggrApp" customModuleProvider="target">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j2o-S2-Ico" id="VnD-6n-aXm">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCn-7G-CY6">
+                                                    <rect key="frame" x="8" y="8" width="125" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="lJt-j5-z3W"/>
+                                                        <constraint firstAttribute="height" constant="32" id="qSm-NM-U3O"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQL-a5-88E">
+                                                    <rect key="frame" x="141" y="8" width="451" height="79"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="KohinoorDevanagari-Book" family="Kohinoor Devanagari" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iQL-a5-88E" firstAttribute="bottom" secondItem="VnD-6n-aXm" secondAttribute="bottomMargin" id="DaW-Ai-XJS"/>
+                                                <constraint firstItem="iQL-a5-88E" firstAttribute="trailing" secondItem="VnD-6n-aXm" secondAttribute="trailingMargin" id="GhL-se-NRI"/>
+                                                <constraint firstItem="iQL-a5-88E" firstAttribute="top" secondItem="VnD-6n-aXm" secondAttribute="topMargin" id="LdU-cp-yHS"/>
+                                                <constraint firstItem="SCn-7G-CY6" firstAttribute="top" secondItem="VnD-6n-aXm" secondAttribute="topMargin" id="LqG-gJ-7aE"/>
+                                                <constraint firstItem="SCn-7G-CY6" firstAttribute="leading" secondItem="VnD-6n-aXm" secondAttribute="leadingMargin" id="lFE-GT-qH1"/>
+                                                <constraint firstItem="iQL-a5-88E" firstAttribute="leading" secondItem="SCn-7G-CY6" secondAttribute="trailing" constant="8" id="y3e-Dc-kz1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dynamicTVCLabel" destination="SCn-7G-CY6" id="ULN-rR-9cU"/>
+                                            <outlet property="dynamicTextView" destination="iQL-a5-88E" id="uMG-WL-LoL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0bv-7V-gij" id="yuZ-Sj-Syi"/>
+                                    <outlet property="delegate" destination="0bv-7V-gij" id="Cpp-nE-ycz"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="vSZ-WD-iJg" secondAttribute="trailing" constant="-16" id="3N5-0H-kZW"/>
+                            <constraint firstItem="vSZ-WD-iJg" firstAttribute="leading" secondItem="eIj-ug-p5l" secondAttribute="leadingMargin" constant="-16" id="4aQ-W5-dvF"/>
+                            <constraint firstItem="vSZ-WD-iJg" firstAttribute="top" secondItem="Bcv-zL-B5J" secondAttribute="bottom" constant="-64" id="OqB-At-pCA"/>
+                            <constraint firstItem="bew-Vb-DG4" firstAttribute="top" secondItem="vSZ-WD-iJg" secondAttribute="bottom" id="pTU-aw-Go2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="memberDetailTableView" destination="vSZ-WD-iJg" id="CbM-A8-AIj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pc8-wZ-h4b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1114" y="1103"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Arrow.png" width="52" height="114"/>
+    </resources>
+</document>

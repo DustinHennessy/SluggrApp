@@ -13,6 +13,25 @@
 		9F9EC9CD1B8B76210061943D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC9CC1B8B76210061943D /* Images.xcassets */; };
 		9F9EC9D01B8B76210061943D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9EC9CE1B8B76210061943D /* LaunchScreen.xib */; };
 		9F9EC9DC1B8B76210061943D /* SluggrAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9DB1B8B76210061943D /* SluggrAppTests.swift */; };
+		9F9EC9E61B8B76B40061943D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9E51B8B76B40061943D /* LoginViewController.swift */; };
+		9F9EC9E81B8B77050061943D /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9E71B8B77050061943D /* MemberDetailViewController.swift */; };
+		9F9EC9EA1B8B77610061943D /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9E91B8B77610061943D /* EditProfileViewController.swift */; };
+		9F9EC9ED1B8B78360061943D /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9EC1B8B78360061943D /* GroupTableViewCell.swift */; };
+		9F9EC9EF1B8B78750061943D /* ProfileLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9EE1B8B78750061943D /* ProfileLabelTableViewCell.swift */; };
+		9F9EC9F11B8B79640061943D /* ProfileTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9F01B8B79640061943D /* ProfileTextFieldTableViewCell.swift */; };
+		9F9EC9F31B8B799D0061943D /* ProfileTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9F21B8B799D0061943D /* ProfileTextViewTableViewCell.swift */; };
+		9F9EC9F51B8B79D60061943D /* ProfileSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9F41B8B79D60061943D /* ProfileSwitchTableViewCell.swift */; };
+		9F9EC9F71B8B7A070061943D /* ProfileDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9F61B8B7A070061943D /* ProfileDateTableViewCell.swift */; };
+		9F9EC9F91B8B7A530061943D /* ProfileMapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9F81B8B7A530061943D /* ProfileMapTableViewCell.swift */; };
+		9F9EC9FB1B8CEFC70061943D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9FA1B8CEFC70061943D /* UserTableViewCell.swift */; };
+		9F9EC9FD1B8CF0010061943D /* MemberEmailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9FC1B8CF0010061943D /* MemberEmailTableViewCell.swift */; };
+		9F9EC9FF1B8CF02D0061943D /* MemberNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9EC9FE1B8CF02D0061943D /* MemberNameTableViewCell.swift */; };
+		9F9ECA011B8CF04D0061943D /* MemberTravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9ECA001B8CF04D0061943D /* MemberTravelTableViewCell.swift */; };
+		9F9ECA041B8CF0C30061943D /* BorderedRoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9ECA031B8CF0C30061943D /* BorderedRoundedLabel.swift */; };
+		9F9ECA061B8CF1C60061943D /* CurrentUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9ECA051B8CF1C60061943D /* CurrentUserManager.swift */; };
+		9F9ECA081B8CF1F00061943D /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9ECA071B8CF1F00061943D /* Users.swift */; };
+		9F9ECA0A1B8CF3760061943D /* Main.Sluggr.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9ECA091B8CF3760061943D /* Main.Sluggr.storyboard */; };
+		9F9ECA0C1B8CF6430061943D /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F9ECA0B1B8CF6430061943D /* Arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +55,25 @@
 		9F9EC9D51B8B76210061943D /* SluggrAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SluggrAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9EC9DA1B8B76210061943D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F9EC9DB1B8B76210061943D /* SluggrAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SluggrAppTests.swift; sourceTree = "<group>"; };
+		9F9EC9E51B8B76B40061943D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9F9EC9E71B8B77050061943D /* MemberDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
+		9F9EC9E91B8B77610061943D /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		9F9EC9EC1B8B78360061943D /* GroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9EE1B8B78750061943D /* ProfileLabelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLabelTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9F01B8B79640061943D /* ProfileTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9F21B8B799D0061943D /* ProfileTextViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTextViewTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9F41B8B79D60061943D /* ProfileSwitchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9F61B8B7A070061943D /* ProfileDateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDateTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9F81B8B7A530061943D /* ProfileMapTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMapTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9FA1B8CEFC70061943D /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9FC1B8CF0010061943D /* MemberEmailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberEmailTableViewCell.swift; sourceTree = "<group>"; };
+		9F9EC9FE1B8CF02D0061943D /* MemberNameTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberNameTableViewCell.swift; sourceTree = "<group>"; };
+		9F9ECA001B8CF04D0061943D /* MemberTravelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberTravelTableViewCell.swift; sourceTree = "<group>"; };
+		9F9ECA031B8CF0C30061943D /* BorderedRoundedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedRoundedLabel.swift; sourceTree = "<group>"; };
+		9F9ECA051B8CF1C60061943D /* CurrentUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUserManager.swift; sourceTree = "<group>"; };
+		9F9ECA071B8CF1F00061943D /* Users.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		9F9ECA091B8CF3760061943D /* Main.Sluggr.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Sluggr.storyboard; sourceTree = "<group>"; };
+		9F9ECA0B1B8CF6430061943D /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Arrow.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +116,15 @@
 			isa = PBXGroup;
 			children = (
 				9F9EC9C51B8B76210061943D /* AppDelegate.swift */,
-				9F9EC9C71B8B76210061943D /* ViewController.swift */,
+				9F9ECA031B8CF0C30061943D /* BorderedRoundedLabel.swift */,
+				9F9ECA051B8CF1C60061943D /* CurrentUserManager.swift */,
+				9F9ECA071B8CF1F00061943D /* Users.swift */,
+				9F9EC9EB1B8B77FB0061943D /* View Controllers */,
+				9F9ECA021B8CF06B0061943D /* Custom TableView Cells */,
 				9F9EC9C91B8B76210061943D /* Main.storyboard */,
+				9F9ECA091B8CF3760061943D /* Main.Sluggr.storyboard */,
 				9F9EC9CC1B8B76210061943D /* Images.xcassets */,
+				9F9ECA0B1B8CF6430061943D /* Arrow.png */,
 				9F9EC9CE1B8B76210061943D /* LaunchScreen.xib */,
 				9F9EC9C31B8B76210061943D /* Supporting Files */,
 			);
@@ -110,6 +154,35 @@
 				9F9EC9DA1B8B76210061943D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F9EC9EB1B8B77FB0061943D /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC9C71B8B76210061943D /* ViewController.swift */,
+				9F9EC9E51B8B76B40061943D /* LoginViewController.swift */,
+				9F9EC9E71B8B77050061943D /* MemberDetailViewController.swift */,
+				9F9EC9E91B8B77610061943D /* EditProfileViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9F9ECA021B8CF06B0061943D /* Custom TableView Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9F9EC9EC1B8B78360061943D /* GroupTableViewCell.swift */,
+				9F9EC9EE1B8B78750061943D /* ProfileLabelTableViewCell.swift */,
+				9F9EC9F01B8B79640061943D /* ProfileTextFieldTableViewCell.swift */,
+				9F9EC9F21B8B799D0061943D /* ProfileTextViewTableViewCell.swift */,
+				9F9EC9F41B8B79D60061943D /* ProfileSwitchTableViewCell.swift */,
+				9F9EC9F61B8B7A070061943D /* ProfileDateTableViewCell.swift */,
+				9F9EC9F81B8B7A530061943D /* ProfileMapTableViewCell.swift */,
+				9F9EC9FA1B8CEFC70061943D /* UserTableViewCell.swift */,
+				9F9EC9FC1B8CF0010061943D /* MemberEmailTableViewCell.swift */,
+				9F9EC9FE1B8CF02D0061943D /* MemberNameTableViewCell.swift */,
+				9F9ECA001B8CF04D0061943D /* MemberTravelTableViewCell.swift */,
+			);
+			name = "Custom TableView Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9ECA0C1B8CF6430061943D /* Arrow.png in Resources */,
 				9F9EC9CB1B8B76210061943D /* Main.storyboard in Resources */,
 				9F9EC9D01B8B76210061943D /* LaunchScreen.xib in Resources */,
 				9F9EC9CD1B8B76210061943D /* Images.xcassets in Resources */,
+				9F9ECA0A1B8CF3760061943D /* Main.Sluggr.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +287,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9ECA061B8CF1C60061943D /* CurrentUserManager.swift in Sources */,
+				9F9EC9FD1B8CF0010061943D /* MemberEmailTableViewCell.swift in Sources */,
+				9F9EC9E61B8B76B40061943D /* LoginViewController.swift in Sources */,
+				9F9EC9EF1B8B78750061943D /* ProfileLabelTableViewCell.swift in Sources */,
+				9F9ECA011B8CF04D0061943D /* MemberTravelTableViewCell.swift in Sources */,
+				9F9ECA081B8CF1F00061943D /* Users.swift in Sources */,
 				9F9EC9C81B8B76210061943D /* ViewController.swift in Sources */,
+				9F9EC9FF1B8CF02D0061943D /* MemberNameTableViewCell.swift in Sources */,
+				9F9EC9F11B8B79640061943D /* ProfileTextFieldTableViewCell.swift in Sources */,
+				9F9EC9FB1B8CEFC70061943D /* UserTableViewCell.swift in Sources */,
+				9F9EC9F31B8B799D0061943D /* ProfileTextViewTableViewCell.swift in Sources */,
+				9F9EC9E81B8B77050061943D /* MemberDetailViewController.swift in Sources */,
+				9F9EC9F91B8B7A530061943D /* ProfileMapTableViewCell.swift in Sources */,
+				9F9EC9ED1B8B78360061943D /* GroupTableViewCell.swift in Sources */,
+				9F9ECA041B8CF0C30061943D /* BorderedRoundedLabel.swift in Sources */,
+				9F9EC9EA1B8B77610061943D /* EditProfileViewController.swift in Sources */,
+				9F9EC9F51B8B79D60061943D /* ProfileSwitchTableViewCell.swift in Sources */,
+				9F9EC9F71B8B7A070061943D /* ProfileDateTableViewCell.swift in Sources */,
 				9F9EC9C61B8B76210061943D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

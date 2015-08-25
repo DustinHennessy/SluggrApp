@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        UINavigationBar.appearance().tintColor = UIColor.darkGrayColor()
+        UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : UIFont(name: "KohinoorDevanagari-Book", size: 24.0)!, NSForegroundColorAttributeName : UIColor.darkGrayColor()]
         return true
     }
 
