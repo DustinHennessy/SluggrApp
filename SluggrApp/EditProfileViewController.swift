@@ -79,7 +79,6 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
         println("TVC")
         let dataFieldPosition = textView.convertPoint(CGPointZero, toView: profileTableView)
         var indexPath = profileTableView.indexPathForRowAtPoint(dataFieldPosition)
-        println("X:\(dataFieldPosition.x) Y:\(dataFieldPosition.y) Row:\(indexPath!.row)")
         var cell = profileTableView.cellForRowAtIndexPath(indexPath!)
         if cell is ProfileTextViewTableViewCell {
             let sCell = profileTableView.cellForRowAtIndexPath(indexPath!) as! ProfileTextViewTableViewCell
@@ -94,17 +93,14 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableFieldChanged(sender: AnyObject) {
-        println("TFC")
         let dataFieldPosition = sender.convertPoint(CGPointZero, toView: profileTableView)
         var indexPath = profileTableView.indexPathForRowAtPoint(dataFieldPosition)
-        println("X:\(dataFieldPosition.x) Y:\(dataFieldPosition.y) Row:\(indexPath!.row)")
         var cell = profileTableView.cellForRowAtIndexPath(indexPath!)
         if cell is ProfileTextFieldTableViewCell {
             let sCell = profileTableView.cellForRowAtIndexPath(indexPath!) as! ProfileTextFieldTableViewCell
             if sCell.dynamicTFCLabel.text == "Home Address" {
                 if sCell.dynamicProfileTextField != nil {
                     homeAddress = sCell.dynamicProfileTextField.text
-                    println("\(homeAddress)")
                 }
             }
             if sCell.dynamicTFCLabel.text == "Work Address" {
@@ -123,7 +119,6 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
             let tvCell = profileTableView.cellForRowAtIndexPath(indexPath!) as! ProfileTextViewTableViewCell
             if tvCell.dynamicTVCLabel.text == "Bio" {
                 userInputBio = tvCell.dynamicTextView.text
-                println("Setting BIO FIELD :)")
             }
             if tvCell.dynamicTVCLabel.text == "Preferences" {
                 userInputPref = tvCell.dynamicTextView.text
@@ -146,7 +141,6 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
     }
-    
     
     func formatDate(date: NSDate) -> String {
         var dateFormatter :NSDateFormatter = NSDateFormatter()
@@ -219,9 +213,7 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
             return textViewCell
         case "MapCell":
             var mapViewCell = tableView.dequeueReusableCellWithIdentifier(currentCellType) as! ProfileMapTableViewCell
-            //mapViewCell.profileMapView.addAnnotations(<#annotations: [AnyObject]!#>) add home and work annotations
             mapViewCell.selectionStyle = UITableViewCellSelectionStyle.None
-            
             return mapViewCell
         case "DateCell":
             var dateViewCell = tableView.dequeueReusableCellWithIdentifier(currentCellType) as! ProfileDateTableViewCell
@@ -243,13 +235,6 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
     
     @IBAction func saveDataToAPI(sender: UIBarButtonItem) {
         println("SDTA Start")
-        println("emailllll:\(userManager.currentUser!.userEmail)")
-        println("ppppppp\(userFirstName)")
-        println("oooooo\(userLastName)")
-        println("kkkkkk\(homeAddress)")
-        println("kkkkkk\(workAddress)")
-        println("jjjjjjj\(userInputPref)")
-        println("nnnnn\(userInputBio)")
         
         //creating the request
         let url = NSURL(string: "http://sluggr-api.herokuapp.com/demo_user/edit_ios")
@@ -275,7 +260,6 @@ class EditProfileViewController: UIViewController, UITableViewDataSource, UITabl
         
         //firing the request
         if count(userFirstName) != 0 {
-            println("$$$$$$$$$$$$$$$$$Validation test passed!!")
             
             NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{ (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
                 println("error: \(error)")

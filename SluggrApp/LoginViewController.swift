@@ -76,7 +76,6 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let url = NSURL(string: "http://sluggr-api.herokuapp.com")
         let request = NSMutableURLRequest(URL: url!)
         request.HTTPMethod = "GET"
-        println("ZZZZZZZZZZZ: \(emailField)")
         request.setValue("\(emailField)", forHTTPHeaderField: "email")
         request.setValue("\(passwordField)", forHTTPHeaderField: "password")
         
@@ -87,6 +86,9 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 println("Data: \(dataString)")
                 var err: NSError?
                 var jsonResult: NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: &err) as! NSDictionary
+            
+                //Validating email address
+                if jsonResult.count != 1 {
                 var userDict = jsonResult.objectForKey("user") as! NSDictionary
                 var userDict2 = jsonResult.objectForKey("itinerary") as! NSDictionary
                 var currentUser = Users()
@@ -109,14 +111,24 @@ class LoginViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 
                 self.userManager.currentUser = currentUser
                 println("\(jsonResult)")
-                
-            } else {
-                self.userManager.currentUser = nil
+                } else {
+                    let alertController = UIAlertController(title: "Incorrect Login", message: "Your email or password is incorrect. Please try again!", preferredStyle: .Alert)
+                    let OKAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+                        println(action)
+                    }
+                    
+                    alertController.addAction(OKAction)
+                    
+                    self.presentViewController(alertController, animated: true) {
+                        
+                    }
             }
             println("**** THC Current User @ Login *** \(self.userManager.currentUser)")
             self.navigationController!.popToRootViewControllerAnimated(true)
+            } else {
+                //do nothing
+            }
         })
-        
         
     }
     
